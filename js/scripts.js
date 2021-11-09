@@ -13,7 +13,7 @@ function wordCounter(text) {
   return wordCount;
 }
 function numberOfOccurrencesInText(word, text) {
-  if (text.trim().length === 0) {
+  if ((text.trim().length === 0) || (word.trim().length === 0)) {
     return 0;
   }
   const wordArray = text.split(" ");
