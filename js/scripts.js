@@ -25,6 +25,9 @@ function numberOfOccurrencesInText(word, text) {
   });
   return wordCount;
 }
+function boldPassage(word, text) {
+  return "<p>" + text + "</p>";
+}
 // UI Logic
 $(document).ready(function(){
   $("form#word-counter").submit(function(event){
