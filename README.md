@@ -99,3 +99,11 @@ const word = "hello";
 const text = "hello there";  
 boldPassage(word, text);  
 **Expected Output:** "\<p>\<b>hello\</b> there\</p>"  
+
+_**Describe: omitOffensiveWords()**_
+
+**Test:** "It should remove a single word from a string and return it"  
+**Code:**  
+const text = "Zoinks thats so crazy";  
+omitOffensiveWords(text);  
+**Expected Output:** "thats so crazy"
