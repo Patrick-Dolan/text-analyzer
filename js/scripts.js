@@ -55,9 +55,6 @@ function omitOffensiveWords(text) {
         textArray.splice(textArray.indexOf(userWord), 1, "*CENSORED*");
       }
     });
-    // if (element.toLowerCase() === "zoinks" || element.toLowerCase() === "muppeteer" || element.toLowerCase() === "biffaroni" || element.toLowerCase() === "loopdaloop"){
-    //   textArray.splice(textArray.indexOf(element), 1, "*CENSORED*");
-    // }
   });
   textArray.forEach(function(element) {
     textOutput = textOutput + element + " "; 
@@ -86,7 +83,8 @@ function boldPassage(word, text) {
 $(document).ready(function(){
   $("form#word-counter").submit(function(event){
     event.preventDefault();
-    const passage = $("#text-passage").val();
+    let passage = $("#text-passage").val();
+    passage = omitOffensiveWords(passage);
     const word = $("#word").val();
     const wordCount = wordCounter(passage);
     const occurrencesOfWord = numberOfOccurrencesInText(word, passage);
