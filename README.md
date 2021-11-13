@@ -1,4 +1,45 @@
-# Tests
+# _Text Analyzer_
+
+#### By _**Patrick Dolan**_
+
+#### _An application that takes a passage and analyzes it giving you information on total word count, replaces "bad" words, and can tell you the number of times a specific word occurs in the passage._
+
+## Technologies Used
+
+* _HTML_
+* _CSS and Bootstrap_
+* _Javascript and jQuery_
+
+## Description
+
+_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+
+## Setup/Installation Requirements
+
+* _Clone Repository down to a directory on your computer._
+* _Open text-analyzer directory and double-click index.html to launch program._
+
+
+## Known Bugs
+
+* _Optional word counter will include any word that includes that word._
+Example:  
+Passage: I want to hold that ant.  
+targeted word: ant  
+selected word count: 2 (want and ant)  
+
+## Contact Me
+
+_Let me know if you run into any issues or have questions, ideas or concerns:_
+_dolanp1992@gmail.com_
+
+## License
+
+_MIT_
+
+Copyright (c) _2021_ _Patrick Dolan_
+
+## Tests
 
 _**Describe: wordCounter()**_
 
