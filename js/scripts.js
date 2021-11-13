@@ -61,6 +61,7 @@ function omitOffensiveWords(text) {
   });
   return textOutput.trim();
 }
+// UI Logic
 function boldPassage(word, text) {
   if (noInputtedWord(word, text)) {
     return "";
@@ -79,7 +80,6 @@ function boldPassage(word, text) {
   });
   return htmlString + "</p>";
 }
-// UI Logic
 $(document).ready(function(){
   $("form#word-counter").submit(function(event){
     event.preventDefault();
