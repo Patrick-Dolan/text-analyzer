@@ -45,6 +45,19 @@ function firstInstanceOfWord(word, text) {
   }
   return -1;
 }
+function omitOffensiveWords(text) {
+  let textArray = text.split(" ");
+  let textOutput = "";
+  textArray.forEach(function(element) {
+    if (element === "zoinks"){
+      textArray.splice(textArray.indexOf(element), 1);
+    }
+  });
+  textArray.forEach(function(element) {
+    textOutput = textOutput + element + " "; 
+  });
+  return textOutput;
+}
 function boldPassage(word, text) {
   if (noInputtedWord(word, text)) {
     return "";
