@@ -16,7 +16,15 @@
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+_This is a text-analyzer that takes a passage from the user and runs a series of operations on it. You can enter a word to count the number of times it occurs in the passage. Once you hit submit it takes in the passage and replaces all the "bad words" with \*CENSORED\*._  
+<br>
+Once it replaces the bad words it will show you the total word count, the count of the user selected word, and it shows all those words in bold.  
+<br>
+Bad words:  
+* zoinks
+* muppeteer
+* loopdaloop
+* biffaroni  
 
 ## Setup/Installation Requirements
 
