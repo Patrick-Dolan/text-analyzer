@@ -47,11 +47,17 @@ function firstInstanceOfWord(word, text) {
 }
 function omitOffensiveWords(text) {
   let textArray = text.split(" ");
+  const offensiveWords = ["zoinks", "muppeteer", "biffaroni", "loopdaloop"];
   let textOutput = "";
-  textArray.forEach(function(element) {
-    if (element.toLowerCase() === "zoinks" || element.toLowerCase() === "muppeteer" || element.toLowerCase() === "biffaroni" || element.toLowerCase() === "loopdaloop"){
-      textArray.splice(textArray.indexOf(element), 1, "*CENSORED*");
-    }
+  textArray.forEach(function(userWord) {
+    offensiveWords.forEach(function(badWord) {
+      if (badWord.toLowerCase() === userWord.toLowerCase()) {
+        textArray.splice(textArray.indexOf(userWord), 1, "*CENSORED*");
+      }
+    });
+    // if (element.toLowerCase() === "zoinks" || element.toLowerCase() === "muppeteer" || element.toLowerCase() === "biffaroni" || element.toLowerCase() === "loopdaloop"){
+    //   textArray.splice(textArray.indexOf(element), 1, "*CENSORED*");
+    // }
   });
   textArray.forEach(function(element) {
     textOutput = textOutput + element + " "; 
