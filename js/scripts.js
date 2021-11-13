@@ -49,14 +49,14 @@ function omitOffensiveWords(text) {
   let textArray = text.split(" ");
   let textOutput = "";
   textArray.forEach(function(element) {
-    if (element === "zoinks"){
+    if (element.toLowerCase() === "zoinks" || element.toLowerCase() === "muppeteer" || element.toLowerCase() === "biffaroni" || element.toLowerCase() === "loopdaloop"){
       textArray.splice(textArray.indexOf(element), 1, "*CENSORED*");
     }
   });
   textArray.forEach(function(element) {
     textOutput = textOutput + element + " "; 
   });
-  return textOutput;
+  return textOutput.trim();
 }
 function boldPassage(word, text) {
   if (noInputtedWord(word, text)) {

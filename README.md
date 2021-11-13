@@ -111,5 +111,11 @@ omitOffensiveWords(text);
 **Test:** "It should replace the targeted word with \*CENSORED\*"  
 **Code:**  
 const text = "Zoinks thats so crazy";  
-omitOffensiveWords(text);
-**Expected Output:** "*CENSORED thats so crazy"
+omitOffensiveWords(text);  
+**Expected Output:** "*CENSORED thats so crazy"  
+
+**Test:** "It should replace the words zoinks, muppeteer, biffaroni, and loopdaloop with \*CENSORED\*"  
+**Code:**  
+const text = "Zoinks thats so crazy I should do a loopdaloop but I dont want to biffaroni like a muppeteer";  
+omitOffensiveWords(text);  
+**Expected Output:** "*CENSORED* thats so crazy I should do a *CENSORED* but I dont want to *CENSORED* like a *CENSORED*"  
