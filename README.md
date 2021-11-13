@@ -4,6 +4,10 @@
 
 #### _An application that takes a passage and analyzes it giving you information on total word count, replaces "bad" words, and can tell you the number of times a specific word occurs in the passage._
 
+## Github Pages Link
+
+[Github Pages](https://patrick-dolan.github.io/text-analyzer/)
+
 ## Technologies Used
 
 * _HTML_
