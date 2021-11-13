@@ -10,7 +10,7 @@ function noInputtedWord() {
 }
 // Business Logic
 function wordCounter(text) {
-  if (text.trim().length === 0) {
+  if (noInputtedWord(text)) {
     return 0;
   }
   let wordCount = 0;
