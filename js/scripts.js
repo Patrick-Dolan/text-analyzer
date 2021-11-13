@@ -50,7 +50,7 @@ function omitOffensiveWords(text) {
   let textOutput = "";
   textArray.forEach(function(element) {
     if (element === "zoinks"){
-      textArray.splice(textArray.indexOf(element), 1);
+      textArray.splice(textArray.indexOf(element), 1, "*CENSORED*");
     }
   });
   textArray.forEach(function(element) {

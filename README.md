@@ -107,3 +107,9 @@ _**Describe: omitOffensiveWords()**_
 const text = "Zoinks thats so crazy";  
 omitOffensiveWords(text);  
 **Expected Output:** "thats so crazy"
+
+**Test:** "It should replace the targeted word with \*CENSORED\*"  
+**Code:**  
+const text = "Zoinks thats so crazy";  
+omitOffensiveWords(text);
+**Expected Output:** "*CENSORED thats so crazy"
