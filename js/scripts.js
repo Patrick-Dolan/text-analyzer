@@ -61,6 +61,23 @@ function omitOffensiveWords(text) {
   });
   return textOutput.trim();
 }
+function mostCommonWords(text) {
+  const textArray = text.split(" ");
+  let uniqueWords = [textArray[0]];
+  // let wordCount = [];
+  // let wordCounter = 0;
+  textArray.forEach(function(textItem) {
+  for (let i = 0; i < textArray.length; i++) {
+    if (uniqueWords.includes(textItem)){
+      break;
+    } else {
+      uniqueWords.push(textItem);
+      break;
+    }
+    }
+  });
+  console.log(uniqueWords);
+}
 // UI Logic
 function boldPassage(word, text) {
   if (noInputtedWord(word, text)) {

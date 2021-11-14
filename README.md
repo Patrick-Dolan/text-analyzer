@@ -172,3 +172,10 @@ omitOffensiveWords(text);
 const text = "Zoinks thats so crazy I should do a loopdaloop but I dont want to biffaroni like a muppeteer";  
 omitOffensiveWords(text);  
 **Expected Output:** "*CENSORED* thats so crazy I should do a *CENSORED* but I dont want to *CENSORED* like a *CENSORED*"  
+
+_**Describe: mostCommonWords()**_  
+**Test:** "It should return an array consisting of unique words from the passage"  
+**Code:**  
+const text = "hi there hey yo hi hi yay yo whoa there whoa yay";  
+mostCommonWords(text);
+**Expected Output:** "hi, there, hey, yo, yay, whoa"
