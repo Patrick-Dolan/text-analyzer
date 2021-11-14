@@ -174,8 +174,15 @@ omitOffensiveWords(text);
 **Expected Output:** "*CENSORED* thats so crazy I should do a *CENSORED* but I dont want to *CENSORED* like a *CENSORED*"  
 
 _**Describe: mostCommonWords()**_  
+
 **Test:** "It should return an array consisting of unique words from the passage"  
 **Code:**  
 const text = "hi there hey yo hi hi yay yo whoa there whoa yay";  
 mostCommonWords(text);
-**Expected Output:** "hi, there, hey, yo, yay, whoa"
+**Expected Output:** "hi, there, hey, yo, yay, whoa"  
+<br>
+**Test:** "It should count the number of instances of each unique word in the user given passage and provide a "
+**Code:**
+const text = "hi there hey yo hi hi yay yo whoa there whoa yay";  
+mostCommonWords(text);  
+**Expected Output:** "hi: 3, there: 2, hey: 1, yo: 2, yay: 2, whoa: 2"  

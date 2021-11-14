@@ -64,17 +64,12 @@ function omitOffensiveWords(text) {
 function mostCommonWords(text) {
   const textArray = text.split(" ");
   let uniqueWords = [textArray[0]];
-  // let wordCount = [];
-  // let wordCounter = 0;
+  let wordCount = [];
+  let wordCounter = 1;
   textArray.forEach(function(textItem) {
-  for (let i = 0; i < textArray.length; i++) {
-    if (uniqueWords.includes(textItem)){
-      break;
-    } else {
-      uniqueWords.push(textItem);
-      break;
-    }
-    }
+      if (!uniqueWords.includes(textItem)){
+        uniqueWords.push(textItem);
+      }
   });
   console.log(uniqueWords);
 }
