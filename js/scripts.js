@@ -8,6 +8,11 @@ function noInputtedWord() {
   }
   return false;
 }
+function getNumberFromString(string) {
+  let number = parseInt(string.replace(/\D/g, ""));
+  console.log(typeof(number));
+  return number;
+}
 // Business Logic
 function wordCounter(text) {
   if (noInputtedWord(text)) {
@@ -81,6 +86,7 @@ function mostCommonWords(text) {
     wordCount.push(element + ": " + wordCounter);
     wordCounter = 0;
   });
+  
   console.log(wordCount);
 }
 // UI Logic
