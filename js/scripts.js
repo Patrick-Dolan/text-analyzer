@@ -50,7 +50,6 @@ function firstInstanceOfWord(word, text) {
 function omitOffensiveWords(text) {
   let textArray = text.split(" ");
   const offensiveWords = ["zoinks", "muppeteer", "biffaroni", "loopdaloop"];
-  let textOutput = "";
   textArray.forEach(function(userWord) {
     offensiveWords.forEach(function(badWord) {
       if (badWord.toLowerCase() === userWord.toLowerCase()) {
@@ -58,10 +57,7 @@ function omitOffensiveWords(text) {
       }
     });
   });
-  textArray.forEach(function(element) {
-    textOutput = textOutput + element + " "; 
-  });
-  return textOutput.trim();
+  return textArray.join(" ");
 }
 function mostCommonWords(text) {
   const textArray = text.split(" ");
