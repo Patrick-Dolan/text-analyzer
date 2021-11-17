@@ -187,8 +187,8 @@ const text = "hi there hey yo hi hi yay yo whoa there whoa yay";
 mostCommonWords(text);  
 **Expected Output:** "hi: 3, there: 2, hey: 1, yo: 2, yay: 2, whoa: 2"  
 <br>
-**Test:** "It should sort the occurences from highest to lowest in an array"  
+**Test:** "It should sort the three highest occurences from highest to lowest in an array"  
 **Code:**  
 const text = "hi there hey yo hi hi yay yo whoa there whoa yay";  
 mostCommonWords(text);  
-**Expected Output:** "hi: 3, there: 2, yo: 2, yay: 2, whoa: 2, hey: 1"  
+**Expected Output:** "hi: 3, there: 2, yo: 2""  

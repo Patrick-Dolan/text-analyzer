@@ -1,7 +1,6 @@
 // Utility Logic
 function noInputtedWord() {
   for (let i=0; i < arguments.length; i++) {
-    console.log(arguments[i]);
     if (arguments[i].trim().length === 0) {
       return true;
     }
@@ -42,7 +41,6 @@ function numberOfOccurrencesInText(word, text) {
 function firstInstanceOfWord(word, text) {
   const textArray = text.split(" ");
   for (let i = 0; i < textArray.length; i++) {
-    console.log(i);
     if (word === textArray[i]) {
       return i;
     }
@@ -76,7 +74,6 @@ function mostCommonWords(text) {
       uniqueWords.push(textItem);
     }
   });
-  console.log(uniqueWords);
   uniqueWords.forEach(function(element) {
     for (i = 0; i < textArray.length; i++) {
       if (element === textArray[i]) {
@@ -95,8 +92,6 @@ function mostCommonWords(text) {
       result.splice(2, 1, element);
     }
   });
-  console.log(wordCount);
-  console.log(result);
   return result;
 }
 // UI Logic
@@ -128,7 +123,6 @@ $(document).ready(function(){
     const occurrencesOfWord = numberOfOccurrencesInText(word, passage);
     $("#total-count").html(wordCount);
     $("#selected-count").html(occurrencesOfWord);
-    // New line of code below.
     $("#bolded-passage").html(boldPassage(word, passage));
   });
 });
