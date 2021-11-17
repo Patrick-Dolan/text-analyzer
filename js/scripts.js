@@ -10,7 +10,6 @@ function noInputtedWord() {
 }
 function getNumberFromString(string) {
   let number = parseInt(string.replace(/\D/g, ""));
-  console.log(typeof(number));
   return number;
 }
 // Business Logic
@@ -71,6 +70,7 @@ function mostCommonWords(text) {
   let wordCount = [];
   let uniqueWords = [];
   let wordCounter = 0;
+  let result = ["0", "0", "0"];
   textArray.forEach(function(textItem) {
     if (!uniqueWords.includes(textItem)){
       uniqueWords.push(textItem);
@@ -86,8 +86,18 @@ function mostCommonWords(text) {
     wordCount.push(element + ": " + wordCounter);
     wordCounter = 0;
   });
-  
+  wordCount.forEach(function(element) {
+    if (getNumberFromString(element) > getNumberFromString(result[0])) {
+      result.splice(0, 1, element);
+    } else if (getNumberFromString(element) > getNumberFromString(result[1]) && getNumberFromString(result[1]) !== getNumberFromString(result[0])) {
+      result.splice(1, 1, element);
+    } else if (getNumberFromString(element) > getNumberFromString(result[2]) && getNumberFromString(element) !== getNumberFromString(result[2])) {
+      result.splice(2, 1, element);
+    }
+  });
   console.log(wordCount);
+  console.log(result);
+  return result;
 }
 // UI Logic
 function boldPassage(word, text) {
