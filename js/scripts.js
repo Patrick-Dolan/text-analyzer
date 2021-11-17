@@ -91,6 +91,7 @@ function mostCommonWords(text) {
   return result;
 }
 // UI Logic
+// TODO update README and make boldPassage target just the parts of words that it targets not the whole word
 function boldPassage(word, text) {
   if (noInputtedWord(word, text)) {
     return "";
