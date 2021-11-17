@@ -113,10 +113,10 @@ function boldPassage(word, text) {
   });
   return htmlString + "</p>";
 }
-function mostOccurences(input) {
+function mostOccurences(text) {
   let htmlOpenTag = "<li>";
   let htmlFullTag = "";
-  input.forEach(function(element) {
+  mostCommonWords(text).forEach(function(element) {
     htmlFullTag = htmlFullTag.concat(htmlOpenTag + element + "</li>");
   });
   return htmlFullTag;
@@ -132,6 +132,6 @@ $(document).ready(function(){
     $("#total-count").html(wordCount);
     $("#selected-count").html(occurrencesOfWord);
     $("#bolded-passage").html(boldPassage(word, passage));
-    $("#common-words").html(mostOccurences(mostCommonWords(passage)));
+    $("#common-words").html(mostOccurences(passage));
   });
 });
